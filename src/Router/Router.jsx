@@ -8,6 +8,8 @@ import Teacherselect from "../Pages/TeacherSelect";
 import TeacherLogin from "../Pages/TeacherLogin";
 import TeacherSignup  from "../Pages/TeacherSignup";
 import Assignment from "../Pages/Assignment";
+import UnAuthorized from "../Pages/unauthorized";
+import Protected from "./Protected";
 function RouterMenu()
 {
     return (<Routes>
@@ -18,7 +20,14 @@ function RouterMenu()
         <Route path="/TeacherSelect" element={<Teacherselect/>}/>;
         <Route path="/TeacherLogin" element={<TeacherLogin/>}/>;
         <Route path="/TeacherSignup" element={<TeacherSignup/>}/>;
-        <Route path="/Assignment" element={<Assignment/>}/>;
+        <Route path="/Assignment" element={<Assignment/>} />
+        <Route path="/unAuthorized" element={<UnAuthorized />} />;
+        
+
+
+        
+
+          
     </Routes>)
 }
 export default RouterMenu;

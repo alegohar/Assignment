@@ -1,9 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-function Assignment()
-{
-    
-return (
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+const Assignment = ()=>
+{  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const globalState = useSelector((state) => state);
+  
+return (<>
     <div>
 <Helmet>                        <style>{'body { background: linear-gradient(to top right, #FF3700, #FBF8FF); }'}</style>
 </Helmet>
@@ -77,6 +82,6 @@ return (
         </div>
       </section>
     </div>
-  );
+    </>);
 }
 export default Assignment;
